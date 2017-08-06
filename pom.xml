@@ -12,6 +12,11 @@
 
         <!-- unit test -->
         <junit.version>4.9</junit.version>
+
+        <log.version>1.7.25</log.version>
+
+        <!-- guava -->
+        <guava.version>22.0</guava.version>
     </properties>
 
     <modules>
@@ -25,6 +30,39 @@
     </modules>
 
     <dependencies>
+
+        <!--guava-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+
+
+        <!-- slf4j-log4j -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${log.version}</version>
+        </dependency>
+
+
+        <!-- slf4j -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${log.version}</version>
+        </dependency>
+
+
+
+        <!-- fastJson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.34</version>
+        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
