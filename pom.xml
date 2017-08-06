@@ -21,9 +21,8 @@
         <module>log</module>
         <module>xml</module>
         <module>spring</module>
+        <module>maven</module>
     </modules>
-
-
 
     <dependencies>
         <dependency>
