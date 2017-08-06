@@ -27,6 +27,12 @@ public class SpringDemo {
     public void demo() {
         assertNotNull(userService);
         assertNotNull(loginService);
+
+        /**
+         * 过程中的两个问题：
+         * 1. spring-context jar没能自动引入， spring-core引入后spring-context也不能自动引入？这些spring jar之间的关联关系怎样？
+         * 2. 用@ContextConfiguration({"classpath:factoryBeanFactoryMethod/spring-config.xml"})行， 但用@ContextConfiguration({"classpath:factoryBeanFactoryMethod/spring-*.xml"})不行。 这里的通配符不起作用。具体什么情况下， 才起作用？
+         */
     }
 
 
