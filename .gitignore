@@ -51,5 +51,6 @@ guava/guava.iml
 jdk/jdk.iml
 log/log.iml
 multi.iml
-pom.xml
+
 xml/pom.xml
+/xml/xml.iml
