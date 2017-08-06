@@ -52,5 +52,6 @@ jdk/jdk.iml
 log/log.iml
 multi.iml
 
-xml/pom.xml
+
 /xml/xml.iml
+/maven/maven.iml
