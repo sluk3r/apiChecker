@@ -27,6 +27,7 @@
         <module>xml</module>
         <module>spring</module>
         <module>maven</module>
+        <module>web-war-classes-compressed</module>
     </modules>
 
     <dependencies>
