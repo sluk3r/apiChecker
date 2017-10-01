@@ -6,6 +6,7 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.serializer.SimpleDateFormatSerializer;
 import org.junit.Test;
 
+import java.sql.Timestamp;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -16,7 +17,7 @@ import java.util.Map;
 public class JsonTest {
 
     @Test
-    public void test() {
+    public void testDate2JsonFormat() {
         Map<String, Date> downOrderInfo = new HashMap<>();
         downOrderInfo.put("now", new Date());
 
@@ -28,5 +29,20 @@ public class JsonTest {
 
         System.out.println(json);
     }
+
+
+
+    @Test
+    public void testDateTime2JsonFormat() {
+        Map<String, Date> downOrderInfo = new HashMap<>();
+        downOrderInfo.put("nowTimeStamp", new Timestamp(System.currentTimeMillis()));
+
+        SerializeConfig mapping = new SerializeConfig();
+        mapping.put(Timestamp.class, new SimpleDateFormatSerializer("yyyy-MM-dd HH:mm:ss"));
+        String json = JSONObject.toJSONString(downOrderInfo,mapping, SerializerFeature.WriteDateUseDateFormat);//{"nowTimeStamp":"2017-09-21 11:11:56"}
+
+        System.out.println(json);
+    }
+
 
 }

@@ -28,6 +28,7 @@
         <module>json</module>
         <module>spring</module>
         <module>maven</module>
+        <module>weka</module>
         <module>web-war-classes-compressed</module>
     </modules>
 
