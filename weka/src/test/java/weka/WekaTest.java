@@ -83,13 +83,13 @@ public class WekaTest {
             for (int i = 0; i < trainingSplits.length; i++) {
                 Evaluation validation = classify(models[j], trainingSplits[i], testingSplits[i]);
                 predictions.appendElements(validation.predictions());
-// Uncomment to see the summary for each training-testing pair.
-//System.out.println(models[j].toString());
+                // Uncomment to see the summary for each training-testing pair.
+                //System.out.println(models[j].toString());
             }
             // Calculate overall accuracy of current classifier on all splits
             double accuracy = calculateAccuracy(predictions);
-// Print current classifier's name and accuracy in a complicated,
-// but nice-looking way.
+            // Print current classifier's name and accuracy in a complicated,
+            // but nice-looking way.
             System.out.println("Accuracy of " + models[j].getClass().getSimpleName() + ": "
                     + String.format("%.2f%%", accuracy)
                     + "\n---------------------------------");
