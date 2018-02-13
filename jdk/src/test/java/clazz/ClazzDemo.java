@@ -16,7 +16,7 @@ public class ClazzDemo {
 
         assertEquals("clazz.ClazzDemo", thisClass.getName());
         assertEquals("ClazzDemo", thisClass.getSimpleName());
-        assertTrue(thisClass.getCanonicalName().equals(thisClass.getName()));
+        assertEquals(thisClass.getCanonicalName(), thisClass.getName());
     }
 
 }
