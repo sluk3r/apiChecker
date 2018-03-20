@@ -31,6 +31,8 @@ public class RangeTest{
         //不可能包含的值
         assertFalse(r1.contains(5000));
         assertFalse(r1.contains(200));
+
+        assertFalse(r1.contains(null));
     }
     
     
