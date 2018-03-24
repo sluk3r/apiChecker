@@ -18,7 +18,7 @@ public class HashmapTest {
         map.put("k1", "v1");
         map.put("k1", "v2");
 
-        assertEquals(map.get("k1"), "v2");
+        assertEquals("v2", map.get("k1"));
     }
 
 }
