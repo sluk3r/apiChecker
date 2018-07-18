@@ -29,8 +29,8 @@ public class JavaReadDroolsReturnedValueTest {
     @Test
     public void read() {
         // Java - prior to fireAllRules
-        DroolsResultContainer resultContainer = new DroolsResultContainer();
-        kieSession.setGlobal("resultContainer", resultContainer);
+        DroolsResultContainer resultContainer_defined_in_java = new DroolsResultContainer();
+        kieSession.setGlobal("resultContainer_defined_in_drl", resultContainer_defined_in_java);  //
 
         Product product = new Product();
 
@@ -38,8 +38,8 @@ public class JavaReadDroolsReturnedValueTest {
         kieSession.fireAllRules();
 
         assertEquals(150000, product.getDiscount());
-        assertTrue(resultContainer.size()>1);
-//        assertTrue(product == resultContainer.getValueByKey("k1"));
-//        assertTrue(resultContainer.getValueByKey("k1") instanceof Date);
+        assertTrue(resultContainer_defined_in_java.size()>1);
+        assertTrue(product == resultContainer_defined_in_java.getValueByKey("k1"));
+        assertTrue(resultContainer_defined_in_java.getValueByKey("k2") instanceof Date);
     }
 }

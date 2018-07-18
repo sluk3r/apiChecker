@@ -3,7 +3,7 @@ package rules
 import model.Product
 import java.util.Date
 
-global readDroolsReturnedValue.DroolsResultContainer resultContainer;
+global readDroolsReturnedValue.DroolsResultContainer resultContainer_defined_in_drl;
 
 rule "Offer for Diamond"
 	when 
@@ -11,6 +11,6 @@ rule "Offer for Diamond"
 	then
 		productObject.setDiscount(150000);
 //		insert(new Date());
-		resultContainer.putValueByKey("k1", productObject);
-		resultContainer.putValueByKey("k2", new Date());
+		resultContainer_defined_in_drl.putValueByKey("k1", productObject);
+		resultContainer_defined_in_drl.putValueByKey("k2", new Date());
 	end
