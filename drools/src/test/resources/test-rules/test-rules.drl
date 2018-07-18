@@ -1,0 +1,16 @@
+package rules
+ 
+import model.Product
+import java.util.Date
+
+global readDroolsReturnedValue.DroolsResultContainer resultContainer;
+
+rule "Offer for Diamond"
+	when 
+		productObject: Product()
+	then
+		productObject.setDiscount(150000);
+//		insert(new Date());
+//		container.putValueByKey("k1", productObject);
+//		container.putValueByKey("k2", new Date());
+	end

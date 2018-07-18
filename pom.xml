@@ -29,6 +29,7 @@
         <module>spring</module>
         <module>maven</module>
         <module>weka</module>
+        <module>drools</module>
         <module>web-war-classes-compressed</module>
     </modules>
 

@@ -54,6 +54,8 @@ multi.iml
 
 
 /xml/xml.iml
+/drools/drools.iml
+/spring/spring.iml
 /maven/maven.iml
 
 */**.iml
