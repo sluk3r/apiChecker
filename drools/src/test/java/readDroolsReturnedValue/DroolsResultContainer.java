@@ -20,4 +20,7 @@ public class DroolsResultContainer {
         return container.get(key);
     }
 
+    public int size() {
+        return container.size();
+    }
 }

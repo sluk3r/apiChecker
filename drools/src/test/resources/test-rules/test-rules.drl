@@ -11,6 +11,6 @@ rule "Offer for Diamond"
 	then
 		productObject.setDiscount(150000);
 //		insert(new Date());
-//		container.putValueByKey("k1", productObject);
-//		container.putValueByKey("k2", new Date());
+		resultContainer.putValueByKey("k1", productObject);
+		resultContainer.putValueByKey("k2", new Date());
 	end

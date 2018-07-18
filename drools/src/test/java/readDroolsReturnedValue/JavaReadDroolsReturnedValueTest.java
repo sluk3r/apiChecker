@@ -38,6 +38,7 @@ public class JavaReadDroolsReturnedValueTest {
         kieSession.fireAllRules();
 
         assertEquals(150000, product.getDiscount());
+        assertTrue(resultContainer.size()>1);
 //        assertTrue(product == resultContainer.getValueByKey("k1"));
 //        assertTrue(resultContainer.getValueByKey("k1") instanceof Date);
     }
