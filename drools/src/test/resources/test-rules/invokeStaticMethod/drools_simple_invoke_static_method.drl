@@ -1,0 +1,9 @@
+import static invokeJavaStaticMethod.DroolsStringUtils.isEmpty;
+
+
+rule CheckIsEmpty
+when
+    eval(isEmpty(""))
+then
+    System.out.println("the param is not empty");
+end
