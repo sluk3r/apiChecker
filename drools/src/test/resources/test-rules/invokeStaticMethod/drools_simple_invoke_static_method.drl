@@ -1,17 +1,26 @@
 import static invokeJavaStaticMethod.DroolsStringUtils.isEmpty;
 
 
-rule CheckIsEmpty
+rule CheckIsEmpty_In_When
 when
     eval(isEmpty(""))
 then
-    System.out.println("the param is not empty");
+    System.out.println("the param is not empty, CheckIsEmpty_In_When");
 end
 
 
-rule Check_Is_Empty_Without_Eval
+//如果不使用eval()包一层的话， 会报错: There are errors in DRL files
+//rule Check_Is_Empty_Without_Eval
+//when
+//    isEmpty("")
+//then
+//    System.out.println("the param is not empty, in Check_Is_Empty_Without_Eval");
+//end
+
+
+rule Check_Is_Empty_Without_Eval_in_then
 when
-    isEmpty("")
+
 then
     System.out.println("the param is not empty, in Check_Is_Empty_Without_Eval");
 end
