@@ -23,4 +23,6 @@ when
 
 then
     System.out.println("the param is not empty, in Check_Is_Empty_Without_Eval");
+    String result = invokeJavaStaticMethod.JavaStaticMethodContainer.append("test_static");
+    System.out.println("invokeJavaStaticMethod.JavaStaticMethodContainer.append result: " + result);
 end
