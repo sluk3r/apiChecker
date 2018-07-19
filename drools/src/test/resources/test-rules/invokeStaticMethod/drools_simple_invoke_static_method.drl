@@ -7,3 +7,11 @@ when
 then
     System.out.println("the param is not empty");
 end
+
+
+rule Check_Is_Empty_Without_Eval
+when
+    isEmpty("")
+then
+    System.out.println("the param is not empty, in Check_Is_Empty_Without_Eval");
+end
