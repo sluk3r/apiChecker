@@ -1,0 +1,12 @@
+import java.util.Map
+import java.util.HashMap
+import droolsInvokeSpringBean.SpringContextContainer
+
+rule invoke_spring_service_via_static_method
+when
+
+then
+    Map<String,Object> input = new HashMap();
+    input.put("k1", "v1");
+    SpringContextContainer.invokeSpringBeanWithoutResult("beanId", "methodName", input);
+end
