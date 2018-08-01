@@ -37,6 +37,9 @@ public class JavaReadDroolsReturnedValueTest {
         kieSession.insert(product);
         kieSession.fireAllRules();
 
+//        https://stackoverflow.com/questions/17848823/drools-using-a-global-variable-in-condition-and-updating-it-in-consequence
+//        Globals are not inserted into the Working Memory, and therefore a global should never be used to establish conditions in rules except when it has a constant immutable value.
+
         assertEquals(150000, product.getDiscount());
         assertTrue(serviceContext_defined_in_java.size()>1);
         assertTrue(product == serviceContext_defined_in_java.getValueByKey("k1"));
