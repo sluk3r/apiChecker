@@ -29,7 +29,7 @@ public class JavaReadDroolsReturnedValueTest {
     @Test
     public void read() {
         // Java - prior to fireAllRules
-        DroolsResultContainer resultContainer_defined_in_java = new DroolsResultContainer();
+        ServiceContext resultContainer_defined_in_java = new ServiceContext();
         kieSession.setGlobal("resultContainer_defined_in_drl", resultContainer_defined_in_java);  //
 
         Product product = new Product();
