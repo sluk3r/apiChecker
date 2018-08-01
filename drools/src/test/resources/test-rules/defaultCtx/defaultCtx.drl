@@ -7,10 +7,12 @@ global defaultCtx.ServiceContext serviceContext_defined_in_drl;
 
 rule "Offer for Diamond"
 	when 
-		productObject: Product()
+
+		productObject: Product(type="2")
+
+//		serviceContext_defined_in_drl.systemContext["key"] == ""
 	then
 		productObject.setDiscount(150000);
-//		insert(new Date());
 		serviceContext_defined_in_drl.putValueByKeyIntoContainer("k1", productObject);
 		serviceContext_defined_in_drl.putValueByKeyIntoContainer("k2", new Date());
 	end
