@@ -29,8 +29,8 @@ public class JavaReadDroolsReturnedValueTest {
     @Test
     public void read() {
         // Java - prior to fireAllRules
-        ServiceContext resultContainer_defined_in_java = new ServiceContext();
-        kieSession.setGlobal("resultContainer_defined_in_drl", resultContainer_defined_in_java);  //
+        ServiceContext serviceContext_defined_in_java = new ServiceContext();
+        kieSession.setGlobal("serviceContext_defined_in_drl", serviceContext_defined_in_java);  //
 
         Product product = new Product();
 
@@ -38,8 +38,8 @@ public class JavaReadDroolsReturnedValueTest {
         kieSession.fireAllRules();
 
         assertEquals(150000, product.getDiscount());
-        assertTrue(resultContainer_defined_in_java.size()>1);
-        assertTrue(product == resultContainer_defined_in_java.getValueByKey("k1"));
-        assertTrue(resultContainer_defined_in_java.getValueByKey("k2") instanceof Date);
+        assertTrue(serviceContext_defined_in_java.size()>1);
+        assertTrue(product == serviceContext_defined_in_java.getValueByKey("k1"));
+        assertTrue(serviceContext_defined_in_java.getValueByKey("k2") instanceof Date);
     }
 }
