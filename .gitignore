@@ -21,6 +21,8 @@
 .idea/**/gradle.xml
 .idea/**/libraries
 
+**/*.iml
+
 # Mongo Explorer plugin:
 .idea/**/mongoSettings.xml
 
@@ -54,9 +56,11 @@ multi.iml
 *.iml
 
 
-/xml/xml.iml
-/drools/drools.iml
-/spring/spring.iml
-/maven/maven.iml
+xml/xml.iml
+drools/drools.iml
+spring/spring.iml
+maven/maven.iml
+json/json.iml
+weka/weka.iml
 
 */**.iml
