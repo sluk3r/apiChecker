@@ -30,6 +30,7 @@
         <module>maven</module>
         <module>weka</module>
         <module>drools</module>
+        <module>ooad</module>
     </modules>
 
     <dependencies>
